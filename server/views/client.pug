@@ -1,0 +1,13 @@
+include index
+include clientDependecies
+  if !!token
+    script.
+      window.token = !{JSON.stringify(token)}
+body
+  block content
+    body(ng-app='registry-app' ng-controller='mainCtrl')
+      div(dw-loading='loading-container' dw-loading-options='{text: "Datele în curs de procesare..."}')
+        div(ng-include="'app/client/main/header'")
+        .container-fluid
+          .body.p-top-10
+            div(ng-view='')

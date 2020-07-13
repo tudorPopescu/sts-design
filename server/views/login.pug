@@ -1,0 +1,93 @@
+doctype html
+html(lang='ro')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='baed125413aa3912cc0452f11058376bda3c799e' content='f7dde7d438ae860b56011f9982db6a1f4ae0a9f9')
+    meta(name='description' content='Registratură')
+    meta(name='keywords' content='Registratură')
+    meta(name='author' content='Your Consulting Team')
+    title Registratură
+    link(rel='stylesheet' href='lib/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='lib/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet' href='dist/css/login.css')
+    script(src='lib/jquery/dist/jquery.min.js')
+    script(src='lib/bootstrap/js/dropdown.js')
+    if !!token
+      script.
+        window.token = !{token}
+  body.no-width
+    .logIn
+      .navbar.navbar-static-top
+        .container-fluid
+          .navbar-header
+            div.head-div
+              a.text-center
+          #navLogIn.navbar-collapse.collapse
+            ul.nav.navbar-nav.navbar-right
+              li
+                form(accept-charset='UTF-8' role='form' action='/' method='post')
+                  input(type='hidden' name='email' value='')
+                  input(type='hidden' name='password' value='')
+                  button.visit(type='submit')
+                    i.fa.fa-user
+                    |   Cont Vizitator
+                li.dropdown
+                  a.dropdown-toggle(data-toggle='dropdown')
+                    i.fa.fa-user
+                    |   Cont demo
+                    span.caret
+                  ul.dropdown-menu
+                    li
+                      form(accept-charset='UTF-8' role='form' action='/' method='post')
+                        input(type='hidden' name='email' value='your.scoala@gmail.com')
+                        input(type='hidden' name='password' value='1122')
+                        button(type='submit') Unitate de învățamânt
+                    li
+                      form(accept-charset='UTF-8' role='form' action='/' method='post')
+                        input(type='hidden' name='email' value='your.primarie@gmail.com')
+                        input(type='hidden' name='password' value='1122')
+                        button(type='submit') Unitate administrativ teritorială
+                li
+                  a.font-15(href='/app/contact' target='_blank')
+                    i.fa.fa-envelope
+                    span  Contact
+                li
+                  a.font-15(href='https://yourconsulting.ro/views/software/produse-software.html' target='_blank')
+                    i.glyphicon.glyphicon-book
+                    span  Site oficial
+
+      .sp-container
+        .sp-content
+          h2#frnme.frame-1
+            span Registrul intrări - ieșiri
+          a#linkYour.sp-circle-link(href='https://yourconsulting.ro/' target='_blank') YourConsulting Soft
+          #form-logIn
+            .panel.panel-logIn.login-form
+              .panel-heading
+                h3.panel-title.text-center.text-white Autentificare
+              .panel-body
+                form(accept-charset='UTF-8' role='form' action='/' method='post' ng-keypress='($event.which === 13) ? submit : 0')
+                  fieldset
+                    .form-group
+                      .input-group
+                        span.input-group-addon
+                          i.fa.fa-user.p-left-right-2
+                        input.form-control(placeholder='Email' name='email' type='text')
+                    .form-group
+                      .input-group
+                        span.input-group-addon
+                          i.fa.fa-key
+                        input.form-control(placeholder='Parola' name='password' type='password')
+
+                    input.btn.btn-lg.btn-success.btn-block(type='submit' value='Intră în cont')
+                    if !success
+                      h4.text-center.text-danger
+                        span #{message}
+
+script(type='text/javascript').
+  window.onload = function () {
+    window.moveTo(0, 0);
+    window.resizeTo(screen.availWidth, screen.availHeight);
+  };

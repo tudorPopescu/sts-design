@@ -1,0 +1,14 @@
+node_modules
+.tmp
+.idea
+.env
+lib
+*.html
+/public/app/less/*.css
+*.log
+/tempExcel
+/tempReports
+bower_components
+/public/dist/**
+/undefined/
+/server/config/local.env.js
