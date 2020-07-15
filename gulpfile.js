@@ -90,6 +90,8 @@
 
   gulp.task('default', gulp.series('clean', gulp.parallel('less-dev', 'scripts-client-dev', 'services-dev', 'pug'), 'watch'));
   // TODO: Make tasks for production
+  // LOGO - DESIGN SA FIE CU ALT FONT (DECIDEM CARE), SA FIE NEGRU, SA NU DEPASEASCA LUNGIMEA TEXTULUI STS, SCOT UMBRA DE LA STS, 
+  // FONT: FOLOSESC ROBOTO PENTRU HEADINGURI SI LATO PENTRU PARAGRAFE
 	// gulp.task('heroku:staging', gulp.parallel('login-less', 'less', 'scripts-admin', 'scripts-client', 'services', 'pug'));
 	// gulp.task('heroku:production', gulp.parallel('login-less', 'less', 'scripts-admin', 'scripts-client', 'services', 'pug'));
 }());

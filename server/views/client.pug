@@ -5,9 +5,10 @@ include clientDependecies
       window.token = !{JSON.stringify(token)}
 body
   block content
-    body(ng-app='registry-app' ng-controller='mainCtrl')
+    body(ng-app='sts-design-app' ng-controller='mainCtrl')
       div(dw-loading='loading-container' dw-loading-options='{text: "Datele în curs de procesare..."}')
-        div(ng-include="'app/client/main/header'")
+        div(ng-include="'app/client/main/header/header'")
         .container-fluid
           .body.p-top-10
             div(ng-view='')
+        div(ng-include="'app/client/main/footer/footer'")

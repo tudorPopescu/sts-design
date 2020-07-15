@@ -13,17 +13,6 @@ if (cluster.isMaster) {
     console.log("I am running with ID : " + cluster.workers[id].process.pid);
   });
 
-  cluster.on('exit', function (worker, code, signal) {
-    console.log('worker ' + worker.process.pid + ' died');
-    // if (signal) {
-    //   console.log(`worker was killed by signal: ${signal}`);
-    // } else if (code !== 0) {
-    //   console.log(`worker exited with error code: ${code}`);
-    // } else {
-    //   console.log('worker success!');
-    // }
-    cluster.fork();
-  });
 } else {
   global.NODE_ENV = process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
   const express = require('express');
