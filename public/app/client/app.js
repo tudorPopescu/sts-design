@@ -21,7 +21,6 @@
 
   function config($routeProvider, $httpProvider, $locationProvider) {
     $httpProvider.interceptors.push('RequestService');
-    $locationProvider.hashPrefix('');
     $routeProvider
       // ---------------------------- CONFIG ----------------------------
       .otherwise({ redirectTo: '/' });

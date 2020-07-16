@@ -1,3 +1,16 @@
-.test here is header
-img(src="app/images/todo-logo.png" alt="STS-Design" style='width: 100px; height: auto;')
-img(src="app/images/todo-logo.png" alt="STS-Design")
+nav.navbar.navbar-expand-lg.navbar-light
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#header' aria-controls='header' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  a.navbar-brand(href='#')
+    img(src="app/images/todo-logo.png" alt="STS-Design" style='width: 100px; height: auto;')
+
+  #header.header.collapse.navbar-collapse
+    ul.navbar-nav.ml-auto
+      li.navbar-item.active
+        a.nav-link.text-uppercase(href='#/') Acasă
+      li.navbar-item
+        a.nav-link.text-uppercase(href='#/') Despre noi
+      li.navbar-item
+        a.nav-link.text-uppercase(href='#/') Portofoliu
+      li.navbar-item
+        a.nav-link.text-uppercase(href='#/') Contact
