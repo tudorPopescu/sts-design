@@ -23,6 +23,12 @@
     $httpProvider.interceptors.push('RequestService');
     $routeProvider
       // ---------------------------- CONFIG ----------------------------
+      .when('/', {
+        templateUrl: 'app/client/main/home/home',
+        controller: 'homeCtrl',
+        controllerAs: 'vm'
+      })
+
       .otherwise({ redirectTo: '/' });
   }
 
