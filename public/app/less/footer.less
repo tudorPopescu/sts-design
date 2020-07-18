@@ -1,0 +1,132 @@
+@import (reference) 'common.less';
+
+footer {
+  background-color: @white;
+  border-top: 1px solid @grey-3;
+  margin-top: 30px;
+
+  @media (min-width: 1200px) {
+    padding: 0 154px;
+  }
+
+  .btn-link {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+
+    &:hover {
+      color: @black;
+      text-decoration: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      text-decoration: none;
+    }
+
+    i {
+      font-size: 15px;
+      float: right;
+      padding-top: 4px;
+    }
+
+    .fa-plus {
+      display: none;
+    }
+
+    &.collapsed {
+      .fa-minus {
+        display: none;
+      }
+
+      .fa-plus {
+        display: inline-block;
+      }
+    }
+  }
+
+  .card {
+    @media (min-width: 992px) {
+      border: none;
+    }
+  }
+
+  .card-header {
+    @media (min-width: 992px) {
+      border: none;
+    }
+  }
+
+  .card-body {
+    padding: 15px 0;
+
+    &.wrap-text {
+      @media (min-width: 1200px) {
+        padding-right: 150px;
+      }
+    }
+  }
+
+  .collapse {
+
+    &:not(.show) {
+      @media (min-width: 992px) {
+        display: block;
+      }
+    }
+  }
+
+  .social {
+    a {
+      margin-right: 20px;
+    }
+
+    i {
+      font-size: 25px;
+
+      &.fa-phone-alt {
+        font-size: 15px;
+      }
+    }
+
+    .fa-facebook {
+      color: @blue-1;
+    }
+
+    .fa-instagram-square {
+      color: transparent;
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .fa-skype {
+      color: @blue-2;
+    }
+
+    .fa-whatsapp {
+      color: @green-1;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .copyright {
+    font-family: @Lato;
+    font-size: 12px;
+  }
+}
