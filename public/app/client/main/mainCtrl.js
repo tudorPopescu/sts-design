@@ -1,7 +1,7 @@
 angular.module('sts-design-app').controller('mainCtrl', mainCtrl);
-mainCtrl.$inject = ['$scope'];
-function mainCtrl($scope) {
+mainCtrl.$inject = ['$scope', '$anchorScroll', '$location'];
+function mainCtrl($scope, $anchorScroll, $location) {
 
   $scope.currYear = new Date().getFullYear();
-  console.log('mata');
-};
+
+}

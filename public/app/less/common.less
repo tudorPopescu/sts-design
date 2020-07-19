@@ -5,6 +5,7 @@
 @grey-1: #f8f8f8;
 @grey-2: #f8f9fc;
 @grey-3: #c4c4c4;
+@grey-4: #7a7a7a;
 @blue-1: #3b5998;
 @blue-2: #00aff0;
 @green-1: #25d366;
@@ -26,12 +27,26 @@
   font-family: @Roboto-Bold;
   font-weight: 700;
   font-size: 16px;
-  letter-spacing: 0.5px;
 }
 
 .text {
   color: @black;
   font-family: @Lato;
   font-size: 15px;
-  letter-spacing: 0.5px;
+}
+
+.anchor {
+  color: @black;
+  font-family: @Lato-Bold;
+  text-decoration: none;
+
+  &:hover {
+    color: @gold;
+    text-decoration: none;
+  }
+}
+
+// UTILS
+.bg-white {
+  background-color: @white;
 }

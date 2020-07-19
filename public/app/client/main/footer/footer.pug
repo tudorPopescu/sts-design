@@ -4,7 +4,7 @@ footer
       .col-12.col-lg-5.col-xl-5.p-0
         .card.p-t-4.border-top-0
           #headingOne.card-header.p-0
-            .row.m-0
+            .row.m-0.bg-white
               .col-12.mt-4.d-none.d-lg-block.pl-xl-0
                 p.s-t STS Design vine în sprijinul dvs.
             button.d-lg-none.s-t.btn.btn-link.btn-block.text-left.collapsed(type='button', data-toggle='collapse', data-target='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
@@ -23,7 +23,7 @@ footer
       .col-12.col-lg-4.col-xl-4.p-0
         .card.p-t-4.border-top-0
           #headingTwo.card-header.p-0
-            .row.m-0
+            .row.m-0.bg-white
               .col-12.mt-4.d-none.d-lg-block.pl-xl-0
                 p.s-t Contact sediu
             button.d-lg-none.s-t.btn.btn-link.btn-block.text-left.collapsed(type='button', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
@@ -35,7 +35,8 @@ footer
               #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordion')
                 .card-body
                   p.text
-                    | Strada Samoil Isopescu, numărul 21, Suceava
+                    i.fas.fa-map-marker-alt(aria-hidden="true")
+                    span   Strada Samoil Isopescu, numărul 21, Suceava
                   p.text
                     i.fas.fa-envelope(aria-hidden="true")
                     span   sts-design@gmail.com
@@ -49,7 +50,7 @@ footer
       .col-12.col-lg-3.col-xl-3.p-0
         .card.p-t-4.border-top-0
           #headingThree.card-header.p-0
-            .row.m-0
+            .row.m-0.bg-white
               .col-12.mt-4.d-none.d-lg-block.pl-xl-0
                 p.s-t Contact
             button.d-lg-none.s-t.btn.btn-link.btn-block.text-left.collapsed(type='button', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
@@ -60,7 +61,7 @@ footer
             .col-12.pl-xl-0
               #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordion')
                 .card-body
-                  p.text.social.mb-0
+                  p.text.text.social.mb-0
                     a(href='#')
                       i.fab.fa-facebook(aria-hidden="true")
                     a(href='#')
@@ -69,7 +70,13 @@ footer
                       i.fab.fa-skype(aria-hidden="true")
                     a(href='#')
                       i.fab.fa-whatsapp(aria-hidden="true")
+                  p.text.text-social.mb-0.mt-3
+                    | Lasă-ne un mesaj pe rețelele de mai sus sau pe pagina de 
+                    a.anchor(href='#') contact
+                    | .
 
   .row.m-0
     .col-12.mt-4
       p.text-center.copyright &copy; 2016 - {{currYear}} STS Design. Toate drepturile rezervate.
+
+  scroll-top

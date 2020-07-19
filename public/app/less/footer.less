@@ -111,22 +111,32 @@ footer {
     }
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .copyright {
     font-family: @Lato;
     font-size: 12px;
+  }
+
+  .scrollup {
+    position: fixed;
+    bottom: 50px;
+    right: 15px;
+    cursor: pointer;
+    color: @grey-4;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+
+    @media (min-width: 992px) {
+      font-size: 40px;
+    }
+
+    &:hover {
+      color: @gold;
+    }
+  }
+
+  .visible {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
   }
 }
