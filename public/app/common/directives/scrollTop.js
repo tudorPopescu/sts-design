@@ -3,7 +3,7 @@
   angular.module('sts-design-app').directive('scrollTop', () => {
     return {
       restrict: 'EA',
-      template:'<a title="Înapoi la început"><i id="scrolltag" class="fas fa-arrow-circle-up scrollup"></i></a>',
+      template:'<a title="Înapoi la început"><div id="scrolltag" class="scroll"><i class="fas fa-chevron-up"></i></div></a>',
       link: function(scope, $elm) {
         var scrollObject = {};
         var scrollElement = document.getElementById('scrolltag');
