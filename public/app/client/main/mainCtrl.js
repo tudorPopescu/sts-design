@@ -1,7 +1,9 @@
 angular.module('sts-design-app').controller('mainCtrl', mainCtrl);
-mainCtrl.$inject = ['$scope', '$anchorScroll', '$location'];
-function mainCtrl($scope, $anchorScroll, $location) {
+mainCtrl.$inject = ['$scope', '$rootScope', '$location'];
+function mainCtrl($scope, $rootScope, $location) {
 
   $scope.currYear = new Date().getFullYear();
-
+  $rootScope.$on('$routeChangeSuccess', function() {
+    $scope.location = $location.path();
+  });
 }

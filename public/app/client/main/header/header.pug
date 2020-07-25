@@ -9,11 +9,11 @@
 
         #header.header.collapse.navbar-collapse
           ul.navbar-nav.ml-auto
-            li.navbar-item.active
+            li.navbar-item(ng-class="{active: location === '/'}")
               a.nav-link.text-uppercase(href='#/') Acasă
             li.navbar-item
               a.nav-link.text-uppercase(href='#/') Despre noi
             li.navbar-item
               a.nav-link.text-uppercase(href='#/') Portofoliu
-            li.navbar-item
-              a.nav-link.text-uppercase(href='#/') Contact
+            li.navbar-item(ng-class="{active: location === '/contact'}")
+              a.nav-link.text-uppercase(href='#/contact') Contact

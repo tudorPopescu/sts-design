@@ -10,7 +10,7 @@
     'ngSanitize',
   ]);
 
-  function RequestService() {
+  function RequestService($q) {
     return {
       request: function (config) {
         config.headers = config.headers || {};
@@ -21,14 +21,18 @@
 
   function config($routeProvider, $httpProvider, $locationProvider) {
     $httpProvider.interceptors.push('RequestService');
+    $locationProvider.hashPrefix('');
     $routeProvider
       // ---------------------------- CONFIG ----------------------------
       .when('/', {
-        templateUrl: 'app/client/main/home/home',
-        controller: 'homeCtrl',
-        controllerAs: 'vm'
+        templateUrl: 'app/client/main/home/home'
       })
 
+      .when('/contact', {
+        templateUrl: 'app/client/main/contact/contact',
+        controller: 'contactCtrl',
+        controllerAs: 'vm'
+      })
       .otherwise({ redirectTo: '/' });
   }
 
@@ -45,7 +49,7 @@
   }
 
   config
-    .$inject = ['$routeProvider', '$httpProvider', '$translateProvider', '$locationProvider'];
+    .$inject = ['$routeProvider', '$httpProvider', '$locationProvider'];
 
   run
     .$inject = ['$rootScope', '$location', '$route', '$templateCache', '$uibModalStack'];
