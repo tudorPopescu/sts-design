@@ -1,19 +1,18 @@
-.test
-  .row.m-0
-    #headerMain.col-12
-      nav.navbar.navbar-expand-lg.navbar-light
-        a.navbar-brand(href='#')
-          img(src="app/images/logo.png" alt="STS-Design")
-        button.navbar-toggler.menu-toggle(type='button' data-toggle='collapse' data-target='#header' aria-controls='header' aria-expanded='false' aria-label='Toggle navigation')
-          span.navbar-toggler-icon
+.row.m-0
+  #headerMain.col-12
+    nav.navbar.navbar-expand-lg.navbar-light
+      a.navbar-brand(href='#')
+        img(src="app/images/logo.png" alt="STS-Design")
+      button.navbar-toggler.menu-toggle(type='button' data-toggle='collapse' data-target='#header' aria-controls='header' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
 
-        #header.header.collapse.navbar-collapse
-          ul.navbar-nav.ml-auto
-            li.navbar-item(ng-class="{active: location === '/'}")
-              a.nav-link.text-uppercase(href='#/') Acasă
-            li.navbar-item
-              a.nav-link.text-uppercase(href='#/') Despre noi
-            li.navbar-item
-              a.nav-link.text-uppercase(href='#/') Portofoliu
-            li.navbar-item(ng-class="{active: location === '/contact'}")
-              a.nav-link.text-uppercase(href='#/contact') Contact
+      #header.header.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.navbar-item(ng-class="{active: location === '/'}")
+            a.nav-link.text-uppercase(href='#/') Acasă
+          li.navbar-item
+            a.nav-link.text-uppercase(href='#/') Despre noi
+          li.navbar-item
+            a.nav-link.text-uppercase(href='#/') Portofoliu
+          li.navbar-item(ng-class="{active: location === '/contact'}")
+            a.nav-link.text-uppercase(href='#/contact') Contact
