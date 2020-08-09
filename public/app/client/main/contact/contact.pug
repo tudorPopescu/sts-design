@@ -1,1 +1,51 @@
-.test pagina de contact
+.row
+  .col-12.p-0
+      img.d-block.w-100(src='https://picsum.photos/1600/400?grayscale' alt='...')
+
+.contact
+  .row.m-0
+    .col-12.p-0.header-wrap
+      h3.title Strada Samoil Isopescu 21, Suceava
+      h3.title +4 0763 651 078
+      h3.title test@gmail.com
+
+    .col-12.col-lg-6.p-0
+      h3.title.msg Lăsați-ne un mesaj:
+      hr.custom-hr
+
+    .col-12.p-0.contact-form
+      form.row.m-0
+        .col-12.col-lg-6.p-0
+          .row.m-0
+            .col-12.col-sm-6.pb-3.p-0.pr-sm-2.pr-lg-3.position-relative
+              label.label Nume
+              input.input-sm.form-control.text-capitalize(ng-model='vm.form.lastName' ng-class='{error: vm.lastNameErr}')
+              small.error-msg(ng-if='vm.lastNameErr') Câmpul este obligatoriu.
+
+            .col-12.col-sm-6.pb-3.p-0.pl-sm-2.pl-lg-3.position-relative
+              label.label Prenume
+              input.input-sm.form-control.text-capitalize(ng-model='vm.form.firstName' ng-class='{error: vm.firstNameErr}')
+              small.error-msg(ng-if='vm.firstNameErr') Câmpul este obligatoriu.
+
+            .col-12.col-sm-6.pb-3.p-0.pr-sm-2.pr-lg-3.position-relative
+              label.label Email
+              input.input-sm.form-control(ng-model='vm.form.email' ng-class='{error: vm.emailErr}')
+              small.error-msg(ng-if='vm.emailErr') Câmpul este obligatoriu.
+
+            .col-12.col-sm-6.pb-3.p-0.pl-sm-2.pl-lg-3.position-relative
+              label.label Telefon
+              input.input-sm.form-control(ng-model='vm.form.phone' ng-class='{error: vm.phoneErr}' allow-number)
+              small.error-msg(ng-if='vm.phoneErr') Câmpul este obligatoriu.
+
+        .textarea-wrap.col-12.col-md-6.pb-3.p-0.position-relative
+          label.label Mesaj
+          textarea.input-sm.form-control(ng-model='vm.form.message' rows='4' ng-class='{error: vm.messageErr}')
+          small.error-msg(ng-if='vm.messageErr') Câmpul este obligatoriu.
+
+        .col-12.col-lg-6.p-0
+          p(ng-if='vm.sendErr') success
+          p(ng-if='vm.sendErr === false') success2
+        .col-12.col-lg-6.p-0.text-lg-right.pt-3.pt-lg-1
+          button.sts-btn(ng-click='vm.send(vm.form);')
+            span.text-uppercase Trimite
+

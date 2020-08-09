@@ -1,1 +1,125 @@
 @import (reference) 'common.less';
+
+.contact {
+  @media (min-width: 1200px) {
+    padding: 30px 140px;
+  }
+
+  .header-wrap {
+    margin-bottom: 100px;
+  }
+
+  .title {
+    font-family: @Roboto;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .custom-hr {
+    background-color: @gold;;
+    border: none;
+    height: 1px;
+  }
+
+  .contact-form {
+    margin-bottom: 50px;
+
+    @media (min-width: 992px) {
+      margin-bottom: 100px;
+    }
+  }
+
+  label {
+    color: @grey-4;
+    font-family: @Roboto-Bold;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin-bottom: 2px;
+  }
+
+  input {
+    font-family: @Lato-Bold;
+    color: @grey-4;
+    letter-spacing: 1px;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      border-color: @gold;
+    }
+
+    &.error {
+      margin-bottom: 0;
+    }
+  }
+
+  .error {
+    border: 1px solid @red-1;
+  }
+
+  .error-msg {
+    position: absolute;
+    color: @red-1;
+    font-size: 12px;
+  }
+
+  .textarea-wrap {
+    @media (min-width: 992px) {
+      padding-left: 40px !important;
+    }
+
+    textarea {
+      font-family: @Lato-Bold;
+      color: @grey-4;
+      letter-spacing: 1px;
+      padding-bottom: 14px;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: @gold;
+      }
+    }
+  }
+
+  .sts-btn {
+    position: relative;
+    border: none;
+    background-color: @black;
+    cursor: pointer;
+    color: @white;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px ;
+    text-align: center;
+  }
+
+  .sts-btn span {
+    color: @white;
+    font-family: @Roboto-Bold;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .sts-btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: @gold;
+    transition: all .7s ease-in-out;
+    transform: translateX(-120%) translateY(-16%) rotate(45deg);
+  }
+
+  .sts-btn:hover:after {
+    transform: translateX(-15%) translateY(-25%) rotate(45deg);
+  }
+
+  #map {
+    height: 100%;
+  }
+}

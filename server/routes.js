@@ -6,6 +6,7 @@
   module.exports = app => {
     /* ----------------------------------------------- CONFIG ----------------------------------------------- */
     app.use('/api/refreshToken', require('./utils/refreshToken')(app));
+    app.use('/api/contact', require('./routes/contact')(app));
 
     app.get('/app/*', (req, res) => {
       res.render('../../public/app/' + req.params['0']);

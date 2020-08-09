@@ -5,6 +5,7 @@ module.exports = (app) => {
     jwtRefresh = require('jsonwebtoken-refresh');
 
   router.get('/', (req, res) => {
+    console.log('aici?');
     let token = req.headers['x-access-token'] || req.body.token || req.params.token;
     if (token) {
       jwt.verify(token, global.config.sKey, function checkToken(err) {
