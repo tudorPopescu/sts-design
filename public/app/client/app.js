@@ -33,6 +33,9 @@
         controller: 'contactCtrl',
         controllerAs: 'vm'
       })
+      .when('/aboutUs', {
+        templateUrl: 'app/client/main/aboutUs/aboutUs'
+      })
       .otherwise({ redirectTo: '/' });
   }
 

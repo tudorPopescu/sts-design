@@ -10,8 +10,8 @@
         ul.navbar-nav.ml-auto
           li.navbar-item(ng-class="{active: location === '/'}")
             a.nav-link.text-uppercase(href='#/') Acasă
-          li.navbar-item
-            a.nav-link.text-uppercase(href='#/') Despre noi
+          li.navbar-item(ng-class="{active: location === '/aboutUs'}")
+            a.nav-link.text-uppercase(href='#/aboutUs') Despre noi
           li.navbar-item
             a.nav-link.text-uppercase(href='#/') Portofoliu
           li.navbar-item(ng-class="{active: location === '/contact'}")

@@ -1,13 +1,9 @@
-.row
-  .col-12.p-0
-      img.d-block.w-100(src='https://picsum.photos/1600/400?grayscale' alt='...')
-
 .contact
   .row.m-0
     .col-12.p-0.header-wrap
-      h3.title Strada Samoil Isopescu 21, Suceava
-      h3.title +4 0763 651 078
-      h3.title test@gmail.com
+      h3.title.font-weight-bold Bulevardul Sofia Vicoveanca, numărul 117, etajul 2
+      h3.title.font-weight-bold +4 0747 580 074
+      h3.title.font-weight-bold sts.design.sv@gmail.com
 
     .col-12.col-lg-6.p-0
       h3.title.msg Lăsați-ne un mesaj:
@@ -49,3 +45,35 @@
           button.sts-btn(ng-click='vm.send(vm.form);')
             span.text-uppercase Trimite
 
+    .col-12.p-0.map-wrap
+      #map
+
+script.
+  function initMap() {
+    var uluru = {lat: 47.643753, lng: 26.291099};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 14,
+      scrollwheel: false,
+      center: uluru
+    });
+    var contentString = '<div>' +
+            '<div style="padding-top: 20px">' +
+            '<p><b>Număr telefon</b>: 0740571926</p>' +
+            '<p><b>Email</b>: office.yourconsulting@gmail.com sau office@yourconsulting.ro</p>' +
+            '<p><b>Adresă</b>: comuna Ipotești, sat Lisaura, str. Florilor, nr. 200E, Suceava</p>' +
+            '</div>' +
+            '</div>';
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+      animation: google.maps.Animation.DROP,
+      title: 'Your Consulting'
+    });
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+  }
+script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDSQ74ettpMtpQ2INYCon6-Yc_Um4ozjj8&callback=initMap')
